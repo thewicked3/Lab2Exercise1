@@ -59,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
         String[] tokens = e.split("((?<=\\+)|(?=\\+))|((?<=\\-)|(?=\\-))|((?<=\\*)|(?=\\*))|((?<=/)|(?=/))");
         int sum=0;
         String op = "+";
-
+        if(e.length()>0){
         for(int i =0 ;i< tokens.length;i++){
             if(i%2==0) {
                 int x = Integer.parseInt(tokens[i]);
@@ -84,7 +84,7 @@ public class MainActivity extends ActionBarActivity {
 
 
 
-       }TextView tvAns = (TextView)findViewById(R.id.tvAns);
+       } }TextView tvAns = (TextView)findViewById(R.id.tvAns);
 
         tvAns.setText(Integer.toString(sum));
         ans =sum;
@@ -142,6 +142,7 @@ public class MainActivity extends ActionBarActivity {
             updateExprDisplay();
 
         }
+
 
 
     }
